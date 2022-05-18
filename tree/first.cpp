@@ -150,9 +150,5 @@ int main() {
     cout<<endl<<"iterative traversal of preorder : ";
     iterative_preorder(root);
 
-    
-
-
-
     return 0;
 }
