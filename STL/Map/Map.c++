@@ -15,10 +15,10 @@ int main() {
     // }
     map<int, string>m;
     m.insert({1, "Vikas"});
-    m.insert({2, "Bhavesh"});
-    m.insert({3, "Sidhant"});
-    m.insert({4, "Preeti"});
-    m.insert({5, "Vikas"});
+    m.insert({2, "Narender"});
+    m.insert({3, "Prashant"});
+    m.insert({4, "Pankaj"});
+    m.insert({5, "Yash"});
     for(auto i : m) {
         cout<<i.first<<" "<<i.second<<endl;
     }

@@ -1,35 +1,28 @@
+//reverse each word in a sentance....
+
 #include <bits/stdc++.h>
 using namespace std;
 
-string reverseSentence(string s1) {
-
-    stack<string> st;
-    string res;
-    int n = s1.length();
-    for(int i = 0; i < n; i++) {
-        string word = "";
-        while(s1[i] != ' ' && i < n) {
-            word += s1[i];
-            i++;
+class solution {
+    public : 
+    string reverseSentence(string s) {
+    int l = 0, r = 0;
+        while(l < s.size()) {
+            while(r < s.size() && s[r] != '.') {
+                r++;
+            }
+            reverse(s.begin() + l, s.begin() + r);
+            l = r+1;
+            r = l;
         }
-        st.push(word);
-    }
-    while(!st.empty()) {
-        res += st.top();
-        st.pop();
-        if(!st.empty())
-            res += " ";
-    }
-    // cout<<endl;
-
-    return res;
+        return s;
 }
+};
 
 int main() {
     string s1;
     cin>>s1;
-    cout<<reverseSentence(s1);
-
+    solution sol;
+    cout<<sol.reverseSentence(s1);
     return 0;
-
 }
